@@ -5,12 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LEMONIZITE UK</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .header-container {
+            width: 100%;
+            /* 240 / 16 = 15, maintains exact aspect ratio */
+            aspect-ratio: 15 / 1; 
+
+            /* image settings */
+            background-image: url('header.png');
+            background-repeat: repeat-x; /* tiles horizontally */
+            background-position: left center;
+            
+            /* scaling logic */
+            background-size: auto 100%; /* height fills container, width adjusts */
+            image-rendering: pixelated;   /* keeps tiles from blurring */
+            image-rendering: crisp-edges;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>My Blog</h1>
-        <p>Welcome to my awesome blog</p>
-    </header>
+    <div class="header-container"></div>
     
     <nav>
         <a href="#home">Home</a>
