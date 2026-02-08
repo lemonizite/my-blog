@@ -39,3 +39,31 @@ footer {
     padding: 1rem;
     margin-top: 2rem;
 }
+
+/* horizontal view (default) */
+.header-container {
+    width: 100%;
+    aspect-ratio: 15 / 1; 
+    background-image: url('resources/lemblog-header.png');
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: auto 100%;
+    image-rendering: pixelated;
+}
+
+/* vertical view (Mobile) */
+@media (orientation: portrait) {
+    .header-container {
+        /* New aspect ratio for 9 tiles instead of 15 */
+        aspect-ratio: 9 / 1;
+        
+        /* Zoom so only the middle 9 tiles fill the width */
+        background-size: 166.66% 100%;
+        
+        /* Center ensures the 3 tiles on each end are cropped */
+        background-position: center;
+        
+        /* Disable repeating so tiles don't leak back in from the edges */
+        background-repeat: no-repeat;
+    }
+}
