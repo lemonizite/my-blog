@@ -1,8 +1,8 @@
 @media (orientation: portrait) {
     .header-container {
-        /* Changes height to match 9 tiles instead of 15 */
+        /* changes height to match 9 tiles instead of 15 */
         aspect-ratio: 9 / 1;
-        /* Zooms in: 15 tiles / 9 visible = 166.66% */
+        /* zooms in: 15 tiles / 9 visible = 166.66% */
         background-size: 166.66% 100%;
     }
 
@@ -10,6 +10,8 @@
     margin: 0 auto;                               
     color: white;
     width: 100%;
+    border-radius: 0;
+
 
     min-height: 200vh; /* Ensure main takes at least full viewport height */
 }
