@@ -1,13 +1,40 @@
-/* simple parallax background */
-body {
-    background-image: url('https://t3.ftcdn.net/jpg/02/64/27/90/360_F_264279006_WDXxV3OHjAOoHqH7iiLDrg23p0947g7U.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    background-color: rgba(0, 0, 0, 0.95);               /* semi-transparent background        */
+    padding: 2rem;                                          
+    border-radius: 8px;
+    color: white;
+    width: 80%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    min-height: 200vh; /* Ensure main takes at least full viewport height */
 }
 
-main {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 2rem;
-    margin: 2rem auto;
+.header-container {
+    background-image: url(../resources/lemblog-header.png);
+    /* This ensures the 15-tile strip stays centered and doesn't repeat */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; 
+    
+    /* Maintains the 15:1 ratio for the 240x16 design */
+    width: 100%;
+    aspect-ratio: 15 / 1;
+
+    /* Vital for sharp pixels */
+    image-rendering: pixelated;
+
+    /* Fallback color to fill the rest of the bar on widescreen */
+    background-color: #000000; 
+    
+    /* Your existing text styles if you have text inside the div */
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
