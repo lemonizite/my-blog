@@ -1,0 +1,52 @@
+.gif-main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gif-card {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.gif-card h1 {
+    margin-bottom: 0.5rem;
+}
+
+.gif-subtitle {
+    margin-bottom: 1.5rem;
+}
+
+.gif-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 0 auto 1rem;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.gif-frame img {
+    max-width: 100%;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+.gif-note {
+    margin-bottom: 1rem;
+}
+
+.back-link {
+    color: white;
+}
+
+@media (orientation: portrait) {
+    .gif-main {
+        min-height: auto;
+    }
+}
